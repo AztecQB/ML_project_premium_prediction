@@ -1,10 +1,10 @@
 import pandas as pd
 import joblib
 
-model_young = joblib.load("artifacts/model_young.joblib")
-model_rest = joblib.load("artifacts/model_rest.joblib")
-scaler_young = joblib.load("artifacts/scaler_young.joblib")
-scaler_rest = joblib.load("artifacts/scaler_rest.joblib")
+model_young = joblib.load("artifacts\model_young.joblib")
+model_rest = joblib.load("artifacts\model_rest.joblib")
+scaler_young = joblib.load("artifacts\scaler_young.joblib")
+scaler_rest = joblib.load("artifacts\scaler_rest.joblib")
 
 def calculate_normalized_risk(medical_history):
     risk_scores = {
@@ -34,7 +34,7 @@ def preprocess_input(input_dict):
     expected_columns = [
         'age', 'number_of_dependants', 'income_lakhs', 'insurance_plan', 'genetical_risk', 'normalized_risk_score',
         'gender_Male', 'region_Northwest', 'region_Southeast', 'region_Southwest', 'marital_status_Unmarried',
-        'bmi_category_Obese', 'bmi_category_Overweight', 'bmi_category_Underweight', 'smoking_status_Occasional',
+        'bmi_category_Obesity', 'bmi_category_Overweight', 'bmi_category_Underweight', 'smoking_status_Occasional',
         'smoking_status_Regular', 'employment_status_Salaried', 'employment_status_Self-Employed'
     ]
 
@@ -57,8 +57,8 @@ def preprocess_input(input_dict):
         elif key == 'Marital Status' and value == 'Unmarried':
             df['marital_status_Unmarried'] = 1
         elif key == 'BMI Category':
-            if value == 'Obese':
-                df['bmi_category_Obese'] = 1
+            if value == 'Obesity':
+                df['bmi_category_Obesity'] = 1
             elif value == 'Overweight':
                 df['bmi_category_Overweight'] = 1
             elif value == 'Underweight':

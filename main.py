@@ -7,7 +7,7 @@ st.title('Health Insurance Cost Predictor')
 categorical_options = {
     'Gender': ['Male', 'Female'],
     'Marital Status': ['Unmarried', 'Married'],
-    'BMI Category': ['Normal', 'Obese', 'Overweight', 'Underweight'],
+    'BMI Category': ['Normal', 'Obesity', 'Overweight', 'Underweight'],
     'Smoking Status': ['No Smoking', 'Regular', 'Occasional'],
     'Employment Status': ['Salaried', 'Self-Employed', 'Freelancer', ''],
     'Region': ['Northwest', 'Southeast', 'Northeast', 'Southwest'],
