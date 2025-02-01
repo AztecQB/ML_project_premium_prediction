@@ -7,7 +7,7 @@ st.title('Health Insurance Cost Predictor')
 categorical_options = {
     'Gender': ['Male', 'Female'],
     'Marital Status': ['Unmarried', 'Married'],
-    'BMI Category': ['Normal', 'Obesity', 'Overweight', 'Underweight'],
+    'BMI Category': ['Normal', 'Obese', 'Overweight', 'Underweight'],
     'Smoking Status': ['No Smoking', 'Regular', 'Occasional'],
     'Employment Status': ['Salaried', 'Self-Employed', 'Freelancer', ''],
     'Region': ['Northwest', 'Southeast', 'Northeast', 'Southwest'],
@@ -74,4 +74,4 @@ input_dict = {
 # Button to make prediction
 if st.button('Predict'):
     prediction = predict(input_dict)
-    st.success(f'Predicted Health Insurance Cost: {prediction}')
+    st.success(f'Predicted Health Insurance Cost (₹ per month): {prediction}')
